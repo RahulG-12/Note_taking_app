@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".New_note_Fragment"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="382dp"
+        android:layout_height="696dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/newnotetitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="New title"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/typesomething"
+            android:hint="Type something"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textColorHint="#010E19"/>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

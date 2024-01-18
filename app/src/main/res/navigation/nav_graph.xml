@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_ragment">
+
+    <fragment
+        android:id="@+id/home_ragment"
+        android:name="com.example.note_takingapp.Home_ragment"
+        android:label="fragment_home_ragment"
+        tools:layout="@layout/fragment_home_fragment" >
+        <action
+            android:id="@+id/action_home_ragment_to_new_note_Fragment"
+            app:destination="@id/new_note_Fragment" />
+        <action
+            android:id="@+id/action_home_ragment_to_update_fragment"
+            app:destination="@id/update_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_note_Fragment"
+        android:name="com.example.note_takingapp.New_note_Fragment"
+        android:label="fragment_new_note_"
+        tools:layout="@layout/fragment_new_note_" >
+        <action
+            android:id="@+id/action_new_note_Fragment_to_home_ragment"
+            app:destination="@id/home_ragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/update_fragment"
+        android:name="com.example.note_takingapp.update_fragment"
+        android:label="fragment_update_fragment"
+        tools:layout="@layout/fragment_update_fragment" >
+        <action
+            android:id="@+id/action_update_fragment_to_home_ragment"
+            app:destination="@id/home_ragment" />
+        <argument
+            android:name="note"
+            app:nullable="true"
+            app:argType="com.example.note_takingapp.model.Note"/>
+    </fragment>
+</navigation>
